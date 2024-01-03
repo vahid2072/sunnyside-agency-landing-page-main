@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);  /*(graphic design text)*/
+  --Dark-blue: hsl(198, 62%, 26%);              /*(photography text)*/
+  --Dark-moderate-cyan: hsl(168, 34%, 41%);     /*(footer)*/
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+// Header
+
+.main-sect{
+  margin: 50px auto;
+  width: 375px;
+  height: 100vh;
+  position: relative;
+  header{
+    height: 500px;
+    background-image: url(/images/mobile/image-header.jpg);
+    background-size: cover;
+      .header-icons{
+        margin: 1rem;
+        padding-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header-logo{
+          width: 124px;
+          height: 24px;
+        }
+        .menu{
+          background: none;
+          border: none;
+          color: white;
+          padding: 12px 16px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        i::before{
+          background:transparent;
+        }
+      }
+      h1{
+        font-size: 36px;
+        font-family: "Fraunces", sans-serif;
+        font-weight: 700;
+        margin: 3.5rem 1rem;
+        text-align: center;
+        color: white;
+        letter-spacing: 0.4rem;
+      }
+      .arrow-icon{
+        margin: 0px auto;
+        padding-top: 20px;
+        width: 20px;
+      }
+  }
+}
+
+// Hidden navbar
+
+.hidden-form{
+  z-index: 2;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  visibility: hidden;
+  .hidden-button{
+    background: none;
+    border: none;
+    color: var(--Grayish-blue);
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+  .contact{
+    cursor: pointer;
+    color: black;
+    background-color: var(--Yellow);
+  }
+}
+
+// Common code
+
+// .common-width{
+//   width: 100%;
+// }
+
+// .common-height{
+//   height: 600px;
+// }
+  
+// .description{
+//   width: 90%;
+// }
+
+.color{
+  text-decoration: underline solid 30%; 
+}
+
+.egg-sect,
+.glass-sect{
+  display: flex;
+  flex-direction: column;
+  .egg-img,
+  .glass-img{
+    background-size: 100% 100%;
+    height: 300px;
+  }
+}
+
+.cherry-sect,
+.tangerine-sect{
+  position: relative;
+  background-size: 100% 100%;
+  height: 600px;
+  .bottom-text{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .absolute-title{
+      margin-bottom: 1rem;
+      font-weight: 900;
+    }
+    .absolute-text{
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+// First section egg
+
+.egg-img{
+  background-image: url(./images/mobile/image-transform.jpg);
+}
+.color{
+  text-decoration-color: var(--Yellow);
+}
+
+// Second section glass
+
+.glass-img{
+    background-image: url(./images/mobile/image-stand-out.jpg);
+}
+.color{
+    text-decoration-color: var(--Soft-red);
+}
+
+// Cherry section image container
+
+.cherry-sect{
+  background-image: url(./images/mobile/image-graphic-design.jpg);
+    .absolute-title{
+      color: var(--Dark-desaturated-cyan);
+    }
+    .absolute-text{
+      color: var(--Dark-desaturated-cyan);
+    }
+}
+
+// Tangerine section image container
+
+.tangerine-sect{
+  background-image: url(./images/mobile/image-photography.jpg);
+    .absolute-title{
+      color: var(--Dark-blue);
+    }
+    .absolute-text{
+      color: var(--Dark-blue);
+    }
+}
+
+// Clients section testimonials
+
+.clients-sect{
+  height: 1200px;
+  margin-bottom: 4rem;
+  .clients-text{
+    margin: 2rem;
+    text-align: center;
+    color: var(--Grayish-blue);
+    letter-spacing: .2rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+  }
+  .testimonial{
+    height: 400px;
+    text-align: center;
+    .profile-pic{
+      background-size: contain;
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      border-radius: 50%;
+    }
+    .comment{
+      font-family: "Barlow", sans-serif;
+      color: var(--Very-dark-grayish-blue);
+      margin: 0 .5rem;
+    }
+    .profile-name{
+      font-family: "Fraunces", sans-serif;
+      font-weight: 900;
+      font-size: 24px;
+      margin-top: 1.1rem;
+      margin-bottom: .8rem;
+    }
+    .occupation{
+      color: var(--Dark-grayish-blue);
+    }
+  }
+}
+
+
+// Profile pictures
+
+.emily{
+  background-image: url(./images/image-emily.jpg);
+}
+
+.thomas{
+  background-image: url(./images/image-thomas.jpg);
+}
+
+.jennie{
+  background-image: url(./images/image-jennie.jpg);
+}
+
+// Four pictures flex
+
+.images{
+  height: 100%;
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    .image{
+      flex-basis: 50%;
+      height: 165px;
+      background-size: cover;
+    }
+  }
+}
+
+.top-left{
+  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+}
+
+.top-right{
+  background-image: url(./images/mobile/image-gallery-orange.jpg);
+}
+
+.bottom-left{
+  background-image: url(./images/mobile//image-gallery-cone.jpg);
+}
+
+.bottom-right{
+  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+}
+
+// Footer
+
+footer{
+  height: 350px;
+  background-color: var(--Dark-moderate-cyan);
+  .center-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo-container{
+      padding-top: 50px;
+       .footer-logo{
+         background-image: url(./images/logo.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         padding: 50px;
+         filter: brightness(0) saturate(100%) invert(14%) sepia(6%) saturate(3360%) hue-rotate(171deg) brightness(96%) contrast(88%);
+       }
+     }
+  }
+
+}
+
+.flex-text, 
+.flex-icons{
+  color: var(--Dark-desaturated-cyan);
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+
+.footer-text:hover, 
+.flex-icon:hover{
+  color: white;
+}
+
+// Text section
+
+.description{
+  margin: 1.7rem;
+  text-align: center;
+  .text-title{
+    font-size: 30px;
+    margin: 0 1.5rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+  }
+  .note{
+    line-height: 1.6rem;
+    margin: 1.5rem 0;
+    color: var(--Dark-grayish-blue);
+  }
+  .underlined{
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+// Responsive design mobile first
+
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main-sect{
+    margin: 0;
+    width: 100%;
+    header{
+      background-image: url(./images/desktop/image-header.jpg);
+      width: 100%;
+      height: 800px;
+      .logo-overlay-flex{
+        display: flex;
+        align-items: center;
+        .menu{
+          display: none;
+        }
+      }
+      .hidden-form{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        visibility: visible;
+        .hidden-button{
+          color: white;
+        }
+        .contact{
+          color: black;
+          background-color: white;
+        }
+        .contact:hover{
+          background-color: var(--Grayish-blue);
+        }
+      }
+      h1{
+        font-size: 60px;
+        font-weight: 900;
+        letter-spacing: 0.5rem;
+      }
+      .arrow-icon{
+        padding-top: 120px;
+      }
+    }
+    .egg-sect{
+      flex-direction: row-reverse;
+      .egg-img {
+        background-image: url(./images/desktop/image-transform.jpg);
+        width: 50%;
+        height: 600px;
+      }
+      .description{
+        width: 50%;
+        text-align: left;
+        padding: 80px;
+        margin: 0;
+        .text-title{
+          width: 70%;
+          font-weight: 700;
+          font-size: 50px;
+        }
+        .note{
+          font-size: 22px;
+          width: 95%;
+          padding: 20px;
+        }
+        .underlined{
+          padding: 20px;
+        }
+      }
+    }
+    .glass-sect{
+      flex-direction: row;
+      .glass-img {
+        background-image: url(./images/desktop/image-stand-out.jpg);
+        width: 50%;
+        height: 600px;
+      }
+      .description{
+        width: 50%;
+        text-align: left;
+        padding: 80px;
+        margin: 0;
+        .text-title{
+          width: 90%;
+          font-weight: 700;
+          font-size: 50px;
+        }
+        .note{
+          font-size: 22px;
+          width: 90%;
+          padding: 20px;
+        }
+        .underlined{
+          padding: 20px;
+        }
+      }
+    }
+    .cherry-trangerine-flex{
+      display: flex;
+      .cherry-sect{
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        width: 50%;
+      }
+      .tangerine-sect{
+        background-image: url(./images/desktop/image-photography.jpg);
+        width: 50%;
+      }
+    }
+    .clients-sect{
+      height: 600px;
+      margin: 0;
+      .clients-text{
+        padding-top: 80px;
+      }
+      .testimonial-flex{
+        display: flex;
+        .profile-pic{
+          width: 80px;
+          height: 80px;
+        }
+        .comment{
+          padding: 40px 0;
+          text-align: center;
+          margin: 0 4rem;
+          width: 70%;
+        }
+      }
+    }
+    .images{
+      height: 100%;
+      .flex{
+        display: flex;
+        flex-wrap: nowrap;
+        .image{
+          flex-basis: 25%;
+          height: 400px;
+          background-size: cover;
+        }
+      }
+    }
+    .top-left{
+      background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    }
+    
+    .top-right{
+      background-image: url(./images/desktop/image-gallery-orange.jpg);
+    }
+    
+    .bottom-left{
+      background-image: url(./images/desktop/image-gallery-cone.jpg);
+    }
+    
+    .bottom-right{
+      background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    }
+    .center-footer{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      flex-wrap: wrap;
+      .logo-container{
+        width: 10%;
+      }
+    }
+  }
+}
